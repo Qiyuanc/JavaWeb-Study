@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                    http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0"
+         metadata-complete="true">
+
+    <!--配置一些初始化参数-->
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:mysql://localhost:3306/mybatis</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>hello</servlet-name>
+        <servlet-class>com.qiyuan.servlet.HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>hello</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>get</servlet-name>
+        <servlet-class>com.qiyuan.servlet.GetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>get</servlet-name>
+        <url-pattern>/get</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getp</servlet-name>
+        <servlet-class>com.qiyuan.servlet.GetPServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getp</servlet-name>
+        <url-pattern>/getp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>dispatch</servlet-name>
+        <servlet-class>com.qiyuan.servlet.DispatchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dispatch</servlet-name>
+        <url-pattern>/dispatch</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>prop</servlet-name>
+        <servlet-class>com.qiyuan.servlet.PropertiesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>prop</servlet-name>
+        <url-pattern>/prop</url-pattern>
+    </servlet-mapping>
+</web-app>
